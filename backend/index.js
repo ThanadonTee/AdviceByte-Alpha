@@ -11,6 +11,7 @@ const activityInformation = require('./controllers/activityInformation')
 const forumInformation = require('./controllers/forumInformation')
 
 // ? Initialize Plugins
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
     .use(cors())
     .use(
