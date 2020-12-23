@@ -6,6 +6,7 @@ const express = require('express'),
 
 router.post('/information', async (req, res) => {
     let { activityId } = req.body
+    console.log(req.body)
 
     let information = await activityInformation.getActivitiesInformation(
         activityId

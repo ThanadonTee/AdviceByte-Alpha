@@ -4,6 +4,7 @@ const app = express()
 // ? Plugins
 const cors = require('cors')
 const cookieSession = require('cookie-session')
+const bodyParser = require('body-parser')
 
 // ? Controllers
 const userInformation = require('./controllers/userInformation')
@@ -11,8 +12,8 @@ const activityInformation = require('./controllers/activityInformation')
 const forumInformation = require('./controllers/forumInformation')
 
 // ? Initialize Plugins
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
     .use(cors())
     .use(
         cookieSession({

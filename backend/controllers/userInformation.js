@@ -76,6 +76,7 @@ router
                 res.send(results)
             }
         )
+        res.status(500).send('Bad Request')
     })
     .post('/firstName', async (req, res) => {
         const userId = req.body.userId
